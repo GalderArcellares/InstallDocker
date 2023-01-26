@@ -11,7 +11,7 @@ if [[ -n "$USER_ID" ]]; then
   usermod -aG sudo user
   usermod -aG "$UART_GROUP" user
   chown user $(tty)
-  echo 'source /tools/Xilinx/Vivado/2019.2/settings64.sh' > /home/user/.bash_profile
+  echo 'source /tools/Xilinx/Vivado/2020.1/settings64.sh' > /home/user/.bash_profile
   chown user:user -R /home/user/
   exec /usr/local/bin/gosu user "$@"
 else
